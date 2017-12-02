@@ -91,7 +91,7 @@ public class SelfSelectFragment extends Fragment implements SelfSelectFragmentIn
                 userView.setVisibility(View.VISIBLE);
                 selectionView.setVisibility(View.GONE);
 
-                Glide.with(getActivity()).load(getPageImage(position)).dontAnimate().into(userScreenImage);
+                Glide.with(getActivity()).load(getPageImage(position)).into(userScreenImage);
 
                 userDropdown.setAdapter(new CustomAdapter(getLoggedInUsers()));
                 userDropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -193,7 +193,7 @@ public class SelfSelectFragment extends Fragment implements SelfSelectFragmentIn
             TextView name = (TextView) convertView.findViewById(R.id.tV_name),
                     email = (TextView) convertView.findViewById(R.id.tV_email);
 
-            Glide.with(getActivity()).load(users.get(position).getDrawableRes()).dontAnimate().into(profileImage);
+            Glide.with(getActivity()).load(users.get(position).getDrawableRes()).into(profileImage);
             name.setText(users.get(position).getName());
             email.setText(users.get(position).getEmail());
 

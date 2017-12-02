@@ -73,9 +73,6 @@ public class BenefitsFragment extends Fragment implements BenefitsFragmentInterf
 
         Glide.with(getActivity())
                 .load(getIllustrationResource(position))
-                .override(256, 256)
-                .dontTransform()
-                .dontAnimate()
                 .into(illustration);
 
         titleText.setText(getTitleText(position));
